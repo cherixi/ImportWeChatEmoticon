@@ -113,12 +113,15 @@ MainWindow::MainWindow(QWidget *parent)
         {
         case 0:
             QMessageBox::critical(this, "失败", "设备未连接，未授权");
+            return;
             break;
         case 1:
             QMessageBox::critical(this, "失败", "设备已连接，未授权");
+            return;
             break;
         case 3:
             QMessageBox::critical(this, "失败", "设备连接错误：请更新设备连接状态");
+            return;
             break;
         default:
             break;
